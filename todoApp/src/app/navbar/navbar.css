@@ -1,0 +1,42 @@
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.container-fluid {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: auto;
+}
+.navbar-brand:hover {
+    color: #00d4ff !important; /* Andere Farbe für das Logo beim Hover */
+    transition: 0.3s;
+}
+.navbar-toggler{
+    margin: 5px 0px 5px 0px;
+}
+/* Den Hintergrund der kompletten oberen Leiste ändern */
+.navbar.sticky-top {
+    border-bottom: 2px solid #444; /* Eine feine Linie unter der Leiste */
+    background-color: #1a1a1a !important; /* Etwas dunkleres Schwarz */
+}
+
+/* Den Toggle-Button (Hamburger-Icon) stylen */
+.navbar-toggler {
+    border: 1px solid #ffcc00 !important; /* Goldener Rahmen um den Button */
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: red !important;
+    transform: translateY(-2px);
+    display: inline-block; /* Wichtig für transform! */
+    transition: transform 0.2s ease, color 0.2s ease; /* Macht es geschmeidig */
+}
