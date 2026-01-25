@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-buttons',
@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './buttons.css',
 })
 export class Buttons {
-
+    label = input<string>();
+    variant = input<'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'light' | 'dark' >('primary');
 }
