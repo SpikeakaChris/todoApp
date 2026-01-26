@@ -16,7 +16,8 @@ body {
     max-width: 1450px;
     width: 100%;
     padding: 0 1rem 0 1rem;
-    background-color: blue;
+    /* background-color: blue; */
+    /* margin-top: 5rem; */
 }
 
 /* ##### READY FOR REFACTOR LATER ####### */
