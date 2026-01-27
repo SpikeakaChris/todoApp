@@ -1,35 +1,65 @@
-.mainbuttons {
-    padding: 1rem 2rem;
+.mainbutton {
+    width: 230px;
+    height: 50px;
+    border: none;
+    outline: none;
     font-size: 1.3rem;
-    min-width: 200px;
-    white-space: pre-line;
-    background-image: linear-gradient(45deg);
-    -webkit-box-shadow: 4px -4px 15px 0px #FF1F1F,
-    12px -11px 7px 0px #FF9376,
-    20px -5px 7px 0px #FFE264,
-    20px 6px 7px 0px #F6FF33,
-    13px 12px 17px 0px #FF9527,
-    2px 17px 17px 0px #FF0000,
-    -9px 21px 18px 0px #FFF212,
-    -9px 6px 11px 0px #FF0808,
-    -11px -9px 11px 0px #FFFA17,
-    -11px -9px 11px 0px #FFFA17,
-    5px 5px 15px 5px rgba(0,0,0,0); 
-    box-shadow: 4px -4px 15px 0px #FF1F1F,
-    12px -11px 7px 0px #FF9376,
-    20px -5px 7px 0px #FFE264,
-    20px 6px 7px 0px #F6FF33,
-    13px 12px 17px 0px #FF9527,
-    2px 17px 17px 0px #FF0000,
-    -9px 21px 18px 0px #FFF212,
-    -9px 6px 11px 0px #FF0808,
-    -11px -9px 11px 0px #FFFA17,
-    -11px -9px 11px 0px #FFFA17,
-    5px 5px 15px 5px rgba(0,0,0,0);
-    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px, 2px 2px 2px rgba(206,89,55,0);
-    color: #FFFFFF;
-    background: #333333;
-    border-radius: 40px 40px 80px 40px;
-    outline: 5px ridge #0004A4;
-    outline-offset: 10px;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    box-shadow: 5px 5px 25px 5px #000;
+    text-shadow: 5px 5px 8px black;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.mainbutton:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.mainbutton:active {
+    color: #000;
+}
+
+.mainbutton:active:after {
+    background: transparent;
+}
+
+.mainbutton:hover:before {
+    opacity: 1;
+}
+
+.mainbutton:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #2600ff, red, #fff200);
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
 }
