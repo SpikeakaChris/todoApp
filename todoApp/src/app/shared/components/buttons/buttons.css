@@ -1,0 +1,35 @@
+.mainbuttons {
+    padding: 1rem 2rem;
+    font-size: 1.3rem;
+    min-width: 200px;
+    white-space: pre-line;
+    background-image: linear-gradient(45deg);
+    -webkit-box-shadow: 4px -4px 15px 0px #FF1F1F,
+    12px -11px 7px 0px #FF9376,
+    20px -5px 7px 0px #FFE264,
+    20px 6px 7px 0px #F6FF33,
+    13px 12px 17px 0px #FF9527,
+    2px 17px 17px 0px #FF0000,
+    -9px 21px 18px 0px #FFF212,
+    -9px 6px 11px 0px #FF0808,
+    -11px -9px 11px 0px #FFFA17,
+    -11px -9px 11px 0px #FFFA17,
+    5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 4px -4px 15px 0px #FF1F1F,
+    12px -11px 7px 0px #FF9376,
+    20px -5px 7px 0px #FFE264,
+    20px 6px 7px 0px #F6FF33,
+    13px 12px 17px 0px #FF9527,
+    2px 17px 17px 0px #FF0000,
+    -9px 21px 18px 0px #FFF212,
+    -9px 6px 11px 0px #FF0808,
+    -11px -9px 11px 0px #FFFA17,
+    -11px -9px 11px 0px #FFFA17,
+    5px 5px 15px 5px rgba(0,0,0,0);
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px, 2px 2px 2px rgba(206,89,55,0);
+    color: #FFFFFF;
+    background: #333333;
+    border-radius: 40px 40px 80px 40px;
+    outline: 5px ridge #0004A4;
+    outline-offset: 10px;
+}
