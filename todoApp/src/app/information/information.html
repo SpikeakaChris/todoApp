@@ -6,6 +6,12 @@
         </div>
     </div>
     <div class="input-group mt-5">
+        <div class="form-floating mengenfeld">
+            <input type="email" class="form-control" id="floatingInput" placeholder="Wurst, Getränk etc">
+            <label for="floatingInput">Anzahl</label>
+        </div>
+    </div>
+    <div class="input-group mt-5">
         <div class="form-floating preisfeld">
             <input type="number" class="form-control" placeholder="0.00" step="0.01" min="0">
             <label for="floatingInputGroup1">Preis</label>
@@ -21,18 +27,18 @@
     <div class="badges">
         <select id="badgeSelect" class="form-select" aria-label="Default select example" (change)="onSelect($event)">
             <option value="" selected disabled>Shop</option>
-            <option value="Aldi" data-img="public/Images/aldi_logo.webp">Aldi</option>
-            <option value="Lidl" data-img="public/Images/aldi_logo.webp">Lidl</option>
-            <option value="Netto rot" data-img="public/Images/netto_rot.webp">Netto rot</option>
-            <option value="Netto schwarz" data-img="public/Images/netto_schwarz.webp">Netto schwarz</option>
-            <option value="Rewe" data-img="public/Images/rewe_logo.webp">Rewe</option>
+            <option value="Aldi" data-img="/Images/aldi_logo.webp">Aldi</option>
+            <option value="Lidl" data-img="/Images/lidl_logo.webp">Lidl</option>
+            <option value="Netto rot" data-img="/Images/netto_rot.webp">Netto rot</option>
+            <option value="Netto schwarz" data-img="/Images/netto_schwarz.webp">Netto schwarz</option>
+            <option value="Rewe" data-img="/Images/rewe_logo.webp">Rewe</option>
         </select>
         <div class="mt-3">
             @for(badge of badges;track badge.name){
                 <span 
                 class="badge bg-light border me-2 d-inline-flex align-items-center">
                     <img [src]="badge.img" [alt]="badge.name"
-                    style="width:20px; height:20px; margin-right:6px;"> {{ badge.name }}
+                    style="width:30px; height:30px;">
                 </span>
             }
         </div>

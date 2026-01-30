@@ -17,12 +17,21 @@ export class Information {
     onSelect(event: Event) {
         const select = event.target as HTMLSelectElement;
         const option = select.options[select.selectedIndex];
+        if (!option) return;
 
-        const name = option.value;
-        const img = option.dataset['img'];
+        const name = option.value?.trim();
+        let img = option.getAttribute('data-img')?.trim() || '';
+        
+        
+        if (!name || !img) {
+            console.warn('Ungültige Auswahl oder fehlendes data-img:', { name, img });
+            return;
+        }
 
-        if (!img) return;
+        const exists = this.badges.some(b => b.name === name);
+        if (!exists) {
+            this.badges.push({ name, img });
+        }
 
-        this.badges.push({ name, img });
     }
 }
